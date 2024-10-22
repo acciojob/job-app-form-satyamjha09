@@ -9,44 +9,50 @@
 <body>
 
 
-	<form action="/submit" method="" >
+	 <h2>Job Application Form</h2>
 
-			<!-- Name -->
-		<label for="name"> Name </label>
-		<input type="text" required />
-	
-		<!-- Email Input  -->
-		<label for="email"> Email Input  </label>
-		<input id="email" required />
-	
-		<!-- Gender  -->
-		<label>Gender</label>
+    <form action="/submit-application" method="POST">
+        <!-- Name -->
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+        
+        <!-- Email -->
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+        <!-- Gender -->
+        <label>Gender*</label>
         <input type="radio" id="gender_m" name="gender" value="male" required> Male
         <input type="radio" id="gender_f" name="gender" value="female" required> Female
-	
-		<!-- Laptop Brands  -->
-		<label for="laptop"> Laptop Brands </label>
-		<select id="laptop">
-			<option value="Apple"> Apple </option>
-			<option value="Asus"> Asus </option>
-			<option value="HP"> HP </option>
-		</select>
-	
-		<!-- DOB  -->
-		<label for="dob"> Date of Birth  </label>
-		<input type="date" id="dob" required />
-	
-		<!-- Passsword  -->
-		<label for="password"> Password </label>
-		<input type="password" id="password" required />
-	
-		<!-- URL  -->
-		<label for="portfolio"> Portfolio URL  </label>
-		<input  type="url" id="portfolio" />
-	
-		<input type="submit" value="Button"  />
-		
-	</form>
+        
+        <!-- Laptop Brands -->
+        <label for="laptop">Laptop Brands</label>
+        <select id="laptop" name="laptop">
+            <option value="">--Please choose a brand--</option>
+            <option value="apple">Apple</option>
+            <option value="asus">Asus</option>
+            <option value="hp">HP</option>
+        </select>
+
+        <!-- Age -->
+        <label for="age">Age*</label>
+        <input type="number" id="age" name="age" placeholder="Your Age" required>
+        
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth*</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <!-- Password -->
+        <label for="password">Password*</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+        
+        <!-- Portfolio URL -->
+        <label for="portfolio">Portfolio URL</label>
+        <input type="url" id="portfolio" name="portfolio" placeholder="Link to your portfolio (optional)">
+        
+        <!-- Submit Button -->
+        <button type="submit">Submit Application</button>
+    </form>
 
 	
 	
